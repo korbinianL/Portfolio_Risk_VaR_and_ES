@@ -29,7 +29,7 @@ I arbitrarily selected 11 stocks, one from each of the 11 GICS sectors outlined 
 
 ### Risk Calculations
 
-These methods were used to calculate 1% 1-day VaR for a $1000 fortfolio value:
+These methods were used to calculate 1% 1-day VaR for a $1,000 fortfolio value:
 
 - Historic Simulation
 - VaR assuming normal distribution
@@ -37,7 +37,7 @@ These methods were used to calculate 1% 1-day VaR for a $1000 fortfolio value:
 - Age Weighted VaR
 - Modified VaR
 
-Results can be intemperated as we are 99% certain losses will not exceed {Insert VaR Value} in one day.
+Results can be intemperated as: Due to market movements, we are 99% certain losses will not exceed {Insert VaR Value} in one day.
 
 |            | **Historic Simulation** | **Normal Dist.** | **T-Dist.** | **Age Weighted** | **Modified** |
 |:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|
@@ -49,7 +49,7 @@ For the expected shortfall I only looked at 3 methods:
 - VaR assuming normal distribution
 - VaR assuming t-distribution
 
-These results can be intemperated as if the loss exceeds the {Insert VaR Value} threshold, the average loss will be {Insert ES Value}.
+These results can be intemperated as: If the loss exceeds the {Insert VaR Value} threshold, the average loss will be {Insert ES Value}.
 
 |            | **Historic Simulation** | **Normal Dist.** | **T-Dist.** |
 |:------------:|:------------:|:------------:|:------------:|
