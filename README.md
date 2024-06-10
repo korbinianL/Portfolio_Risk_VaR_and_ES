@@ -55,3 +55,6 @@ These results can be intemperated as: If the loss exceeds the {Insert VaR Value}
 |:------------:|:------------:|:------------:|:------------:|
 | **ES** | $48.41  | $35.92  | $116.26  |
 
+### Testing effectiveness of VaR model
+
+To test the performance of the differnt VaR models I used a rolling window appraoch with an intitial window of 500 observations
