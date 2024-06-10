@@ -74,9 +74,9 @@ To test the performance of the different VaR models I used a rolling window appr
 | **QPS** | 0.027  | 0.038  | 0.025  | 0.023  | 0.007  |
 
 <p align="center">
-  <img src="images/ef.png" alt="Efficient Frontier" width="400"/>
-  <img src="images/p_rets.png" alt="Portfolio Returns" width="400"/>
-  <img src="images/cum_rets.png" alt="Cumulitative Returns" width="400"/>
-  <img src="images/dist.png" alt="Portfolio Distribution" width="400"/>
-  <img src="images/dist.png" alt="Portfolio Distribution" width="400"/>
+  <img src="images/1.png" alt="Backtesting Historic Simulation" width="400"/>
+  <img src="images/2.png" alt="Backtesting Normal Distribution" width="400"/>
+  <img src="images/3.png" alt="Backtesting T-distirbution" width="400"/>
+  <img src="images/4.png" alt="Backtesting Age weighted" width="400"/>
+  <img src="images/5.png" alt="Backtesting Modified" width="400"/>
 </p>
