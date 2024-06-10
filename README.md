@@ -4,7 +4,8 @@
 This analysis focuses on the risk assessment of a diversified stock portfolio using two prominent risk metrics: Value at Risk (VaR) and Expected Shortfall (ES). VaR is a widely used risk measure that estimates the maximum potential loss of a portfolio over a specified time period within a given confidence level. While VaR provides a clear threshold for potential losses, it does not capture the extent of losses beyond this threshold. To address this limitation, Expected Shortfall (ES), also known as Conditional VaR, is employed. ES provides an average of the potential losses exceeding the VaR, offering a more comprehensive view of tail risk.
 
 ### Portfolio Creation
-I arbitrarily selected 11 stocks, one from each of the 11 GICS sectors outlined by [MSCI](https://www.msci.com/our-solutions/indexes/gics), and got daily adjested close prices for the last 10 years from 01/04/2014 to 28/04/2024. Then I calculated the efficent frontier for these stocks and used the weights of the optimal portfolio to get daily returns for the portfolio. Two assumptions I made are that short selling is allowed, hence negative weights and for simplicity the risk free rate is 0. The images show the efficient frontier, portfolio returns, the cumulative returns of each stock and the portfolio and how the returns are distributed respectively.
+I arbitrarily selected 11 stocks, one from each of the 11 GICS sectors outlined by [MSCI](https://www.msci.com/our-solutions/indexes/gics) and got daily adjusted close prices for the last 10 years from 01/04/2014 to 28/04/2024. Then I calculated the efficient frontier for these stocks and used the weights of the optimal portfolio to get daily returns for the portfolio. Two assumptions I made are that short selling is allowed, hence negative weights and for simplicity the risk-free rate is 0. The images show the efficient frontier, portfolio returns, the cumulative returns of each stock and the portfolio and how the returns are distributed respectively.
+
 
 | Stock  | Weight |
 |----------|----------|
@@ -29,7 +30,7 @@ I arbitrarily selected 11 stocks, one from each of the 11 GICS sectors outlined 
 
 ### Risk Calculations
 
-These methods were used to calculate 1% 1-day VaR for a $1,000 fortfolio value:
+These methods were used to calculate 1% 1-day VaR for a $1,000 portfolio value.
 
 - Historic Simulation
 - VaR assuming normal distribution
@@ -37,7 +38,7 @@ These methods were used to calculate 1% 1-day VaR for a $1,000 fortfolio value:
 - Age Weighted VaR
 - Modified VaR
 
-Results can be intemperated as: Due to market movements, we are 99% certain losses will not exceed {Insert VaR Value} in one day.
+Results can be interpreted as: Due to market movements, we are 99% certain losses will not exceed {Insert VaR Value} in one day.
 
 |            | **Historic Simulation** | **Normal Dist.** | **T-Dist.** | **Age Weighted** | **Modified** |
 |:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|
@@ -49,7 +50,7 @@ For the expected shortfall I only looked at 3 methods:
 - VaR assuming normal distribution
 - VaR assuming t-distribution
 
-These results can be intemperated as: If the loss exceeds the {Insert VaR Value} threshold, the average loss will be {Insert ES Value}.
+These results can be interpreted as: If the loss exceeds the {Insert VaR Value} threshold, the average loss will be {Insert ES Value}.
 
 |            | **Historic Simulation** | **Normal Dist.** | **T-Dist.** |
 |:------------:|:------------:|:------------:|:------------:|
@@ -57,7 +58,7 @@ These results can be intemperated as: If the loss exceeds the {Insert VaR Value}
 
 ### Testing effectiveness of VaR model
 
-To test the performance of the differnt VaR models I used a rolling window appraoch with an intitial window of 500 observations and here the portfolio value is $1. Four tests were used to measure and compare the VaR models:
+To test the performance of the different VaR models I used a rolling window approach with an initial window of 500 observations and here the portfolio value is $1. Four tests were used to measure and compare the VaR models:
 
 - Violation ratio: Measures the number of times losses were greater than VaR. A good model will have a ratio close to one. For a 1% 1-day VaR with 500 observations you'd expect losses to be greater than the VaR on 5 occasions.
 - [Unconditional coverage test](https://www.scribd.com/document/305462693/Kupiec-Paul-Techniques-for-Verifying-the-Accuracy-of-Risk-Measurement-Models): ensures that the theoretical confidence level p matches the empirical probability of violation. Similar to the violation ratio, but we draw our conclusion from a p-value.
